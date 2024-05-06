@@ -1,19 +1,26 @@
+import { useState } from "react";
 const Home = () => {
-    const handleClick = (e) => {
-        e.preventDefault();
-        console.log('hello, crystal', e);
+    const [name, setName] = useState('crystal'); // name is the state variable, setName is the function to update the state variable, 'crystal' is the initial value of the state variable
+    const [age, setAge] = useState(25); // age is the state variable, setAge is the function to update the state variable, 25 is the initial value of the state variable
+
+
+
+
+    const handleClick = () => {
+      
+       setName('Crystal Blue'); // setName is the function to update the state variable
+         setAge(30); // setAge is the function to update the state variable
     }
 
-    const handleClickAgain = (name, e) => {
-        console.log('hello ' + name, e.target);
-    }
+ 
 
     return (
         <div className="home">
             <h2>Homepage</h2>
+            <p>{ name } is { age  } years old </p>
             {/* handleClick() or handleClick('crystal') will invoke the fuction automatically*/}
             <button onClick={handleClick}>Click me</button>
-            <button onClick={(e) => handleClickAgain('crystal', e)}>Click me again</button>
+           
         </div>
     );
 }
