@@ -11,6 +11,7 @@ const Home = () => {
     return (
         <div className="home">
             <h2>Homepage</h2>
+            {/* handleClick() or handleClick('crystal') will invoke the fuction automatically*/}
             <button onClick={handleClick}>Click me</button>
             <button onClick={(e) => handleClickAgain('crystal', e)}>Click me again</button>
         </div>
