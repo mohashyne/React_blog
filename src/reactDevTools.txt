@@ -1,0 +1,52 @@
+React devtools
+React DevTools lets you debug and profile your React application. It is available as a browser extension for Chrome, Firefox, and Edge. It allows you to inspect the React component tree, including the props and state of each component. You can also view the component hierarchy, search for components, and inspect the component's context and hooks.
+// State Hooks - used for managing local component state. It is a named import from the react library.
+// Use it instead of this.state in class components.
+// The returned value is a pair: [state, setState]. We can call setState with a new value to update the state.
+// The value returned by the hook is the current state value, and the function returned by the hook is used to update the state.
+
+useState([initialValue]) // returns a pair: [state, setState]
+
+function App() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+
+
+
+// Effect Hook - Used to perform side effects in function components. It is a named import from the react library.  
+// It is similar to componentDidMount, componentDidUpdate, and componentWillUnmount in class components.
+// The effect is not re-run if the component re-renders and the dependencies haven't changed.
+// The effect is run after every render, including the first render.
+// If you want to run an effect and clean it up only once (on mount and unmount), you can pass an empty array [] as the second argument.
+// If you want to run an effect and clean it up when some value changes, you can pass that value as a dependency in the array.
+
+useEffect(() => {
+  // effect code
+  return () => {
+    // cleanup code
+  };
+} ,[dependencies]);  /* If you omit the second argument, the effect runs after every render. If you pass an empty array [], the effect runs only once (on mount and unmount). If you pass a value in the array, the effect runs when that value changes. */
+}, [dependency]); // runs when dependency changes
+
+
+
+// Customizing the Effect Cleanup Function
+// If you’re using useEffect and you need to clean up after the effect, you can return a function from the effect. This function will be called when the component unmounts or when the effect is re-run.
+
+useEffect(() => {
+  const subscription = props.source.subscribe();
+  return () => {
+    // Clean up the subscription
+    subscription.unsubscribe();
+  };
+}
+
+
