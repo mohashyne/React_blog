@@ -33,6 +33,14 @@ const Home = () => {
         }
       ]
       ); 
+      
+      const [blogContent, setBlogContent] =  useState('')
+
+      const showBlogContent = ()  => {
+          setBlogContent(blogs.map((blog) => {
+                return blog.body;
+           }))
+      }
  
 
     return (
@@ -41,6 +49,8 @@ const Home = () => {
             <div className="blog-preview" key={blog.id}>
                 <h2>{ blog.title }</h2>
                 <p>Written by { blog.author }</p>
+                <p>{ blogContent }</p>
+                <button onClick={showBlogContent}>Show Content</button>
             </div>
          ))}
             
