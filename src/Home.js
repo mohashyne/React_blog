@@ -24,13 +24,13 @@ const Home = () => {
           "id": 4,
           "title": "The Rise of Virtual Reality in Gaming",
           "body": "Virtual Reality (VR) technology is reshaping the gaming landscape, offering immersive experiences...",
-          "author": "Sophia Chen"
+          "author": "Muhammad Salihu"
         },
         {
           "id": 5,
           "title": "Cybersecurity Trends in 2024",
           "body": "With cyber threats evolving rapidly, staying ahead of the curve is crucial...",
-          "author": "Michael Adams"
+          "author": "Muhammad Salihu"
         }
       ]
       ); 
@@ -39,6 +39,8 @@ const Home = () => {
     return (
         <div className="home">
         <BlogList blogs={blogs} title="All Tech Blogs"/> 
+        <BlogList blogs={ blogs.filter((blog) => blog.author === 'Muhammad Salihu')}
+         title="Muhammad's Blogs" />
         </div>
     );
 }
