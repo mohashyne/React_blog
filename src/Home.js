@@ -35,6 +35,8 @@ const Home = () => {
       ]
       ); 
 
+      const [name, setName] = useState('crystal')
+
       const handleDelete = (id) => {
          const newBlogs = blogs.filter((blog) => blog.id !== id )
          setBlogs(newBlogs);
@@ -43,8 +45,8 @@ const Home = () => {
       // UseEffect: runs a function on every render of the component
       useEffect(() => {
         console.log('useeffect ran')
-        console.log(blogs);
-      });
+        console.log(name);
+      }, [name]);
  
 
     return (
@@ -52,6 +54,8 @@ const Home = () => {
         <BlogList blogs={blogs} title="All Tech Blogs" handleDelete={handleDelete}/> 
         <BlogList blogs={ blogs.filter((blog) => blog.author === 'Muhammad Salihu')}
          title="Muhammad's Blogs" handleDelete={handleDelete}/>
+         <button onClick={() => setName('Crystal Blue') }>change name</button>
+         <p>{ name }</p>
         </div>
     );
 }
