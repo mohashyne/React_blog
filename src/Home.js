@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import BlogList from "./blogList";
 const Home = () => {
     const [blogs, setBlogs] = useState(null); 
+    const [isPending, setIsPending] = useState(true);
 
-      const [name, setName] = useState('crystal')
+      // const [name, setName] = useState('crystal')
 
       // const handleDelete = (id) => {
       //    const newBlogs = blogs.filter((blog) => blog.id !== id )
@@ -17,7 +18,8 @@ const Home = () => {
           return res.json();
         })
         .then((data) => {
-        setBlogs(data)
+        setBlogs(data);
+        setIsPending(false);
         })
       }, []);
  
@@ -25,10 +27,12 @@ const Home = () => {
     return (
         <div className="home">
         {blogs && <BlogList blogs={blogs} title="All Tech Blogs" /> }
+        {/* if data is still pending display this message */}
+        {isPending ? 'Loading...' : null}
         {/* {blogs && <BlogList blogs={ blogs.filter((blog) => blog.author === 'Muhammad Salihu')} 
          title="Muhammad's Blogs" handleDelete={handleDelete}/> } */}
-         <button onClick={() => setName('Crystal Blue') }>change name</button>
-         <p>{ name }</p>
+         {/* <button onClick={() => setName('Crystal Blue') }>change name</button>
+         <p>{ name }</p> */}
         </div>
     );
 }
