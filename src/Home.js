@@ -3,6 +3,7 @@ import BlogList from "./blogList";
 const Home = () => {
     const [blogs, setBlogs] = useState(null); 
     const [isPending, setIsPending] = useState(true);
+    const [error, setError] = useState(null);
 
       // const [name, setName] = useState('crystal')
 
@@ -15,17 +16,27 @@ const Home = () => {
       useEffect(() => {
         fetch('http://localhost:8000/blogs')
         .then(res => {
+          if(!res.ok){
+            throw Error('could not fetch the data for that resource');
+          }
           return res.json();
         })
         .then((data) => {
         setBlogs(data);
         setIsPending(false);
+        setError(null);
+        })
+        .catch((err) => {
+          // console.log(err.message) 'could not fetch the data for that resource'
+          setError(err.message);
+          setIsPending(false);
         })
       }, []);
  
 
     return (
         <div className="home">
+        {error && <div>{error}</div>}
         {blogs && <BlogList blogs={blogs} title="All Tech Blogs" /> }
         {/* if data is still pending display this message */}
         {isPending ? 'Loading...' : null}
