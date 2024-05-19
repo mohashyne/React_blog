@@ -11,6 +11,9 @@ function App() {
     <div className="App">
         <Navbar />
         <div className="content">
+          {/* The issue you're experiencing where the page fetches and reloads every time you click a link in your React application can be related to how you're handling routing and navigation. Typically, this problem arises when:
+           The links are causing a full page reload instead of client-side navigation.
+           The server isn't properly configured to handle client-side routing.  */}
         <Switch>
           <Route exact path="/">
             <Home />
