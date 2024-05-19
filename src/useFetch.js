@@ -15,6 +15,7 @@ const useFetch = (url) => {
           return res.json();
         })
         .then((data) => {
+          // console.table(data)
         setData(data);
         setIsPending(false);
         setError(null);
