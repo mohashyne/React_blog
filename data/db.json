@@ -1,35 +1,34 @@
 {
-    "blogs": [
-      {
-        "id": 1,
-        "title": "The Future of AI in Healthcare",
-        "body": "Artificial Intelligence (AI) is revolutionizing the healthcare industry Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consequatur iste et voluptas veniam accusantium esse nisi ex nam corrupti pariatur, aut placeat ducimus facilis vero reprehenderit velit sequi tempora. Tempora odio iste facilis quod sapiente ab officiis quis eaque minima recusandae! Asperiores velit voluptatum at sapiente placeat, expedita nobis....",
-        "author": "Muhammad Salihu"
-      },
-      {
-        "id": 2,
-        "title": "5G Technology: Transforming Connectivity",
-        "body": "The advent of 5G technology promises faster speeds, lower latency, and  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consequatur iste et voluptas veniam accusantium esse nisi ex nam corrupti pariatur, aut placeat ducimus facilis vero reprehenderit velit sequi tempora. Tempora odio iste facilis quod sapiente ab officiis quis eaque minima recusandae! Asperiores velit voluptatum at sapiente placeat, expedita nobis....",
-        "author": "Hauwa Muhammad"
-      },
-      {
-        "id": 3,
-        "title": "Blockchain: Beyond Cryptocurrency",
-        "body": "While blockchain technology gained fame through cryptocurrencies like Bitcoin  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consequatur iste et voluptas veniam accusantium esse nisi ex nam corrupti pariatur, aut placeat ducimus facilis vero reprehenderit velit sequi tempora. Tempora odio iste facilis quod sapiente ab officiis quis eaque minima recusandae! Asperiores velit voluptatum at sapiente placeat, expedita nobis....",
-        "author": "Zainab Muhammad"
-      },
-      {
-        "id": 4,
-        "title": "The Rise of Virtual Reality in Gaming",
-        "body": "Virtual Reality (VR) technology is reshaping the gaming landscape, offering immersive experiences Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consequatur iste et voluptas veniam accusantium esse nisi ex nam corrupti pariatur, aut placeat ducimus facilis vero reprehenderit velit sequi tempora. Tempora odio iste facilis quod sapiente ab officiis quis eaque minima recusandae! Asperiores velit voluptatum at sapiente placeat, expedita nobis....",
-        "author": "Muhammad Salihu"
-      },
-      {
-        "id": 5,
-        "title": "Cybersecurity Trends in 2024",
-        "body": "With cyber threats evolving rapidly, staying ahead of the curve is crucial Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consequatur iste et voluptas veniam accusantium esse nisi ex nam corrupti pariatur, aut placeat ducimus facilis vero reprehenderit velit sequi tempora. Tempora odio iste facilis quod sapiente ab officiis quis eaque minima recusandae! Asperiores velit voluptatum at sapiente placeat, expedita nobis....",
-        "author": "Muhammad Salihu"
-      }
-    ]
-  }
-  
+  "blogs": [
+    {
+      "id": "1",
+      "title": "The Future of AI in Healthcare",
+      "body": "Artificial Intelligence (AI) is revolutionizing the healthcare industry Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consequatur iste et voluptas veniam accusantium esse nisi ex nam corrupti pariatur, aut placeat ducimus facilis vero reprehenderit velit sequi tempora. Tempora odio iste facilis quod sapiente ab officiis quis eaque minima recusandae! Asperiores velit voluptatum at sapiente placeat, expedita nobis....",
+      "author": "Muhammad Salihu"
+    },
+    {
+      "id": "2",
+      "title": "5G Technology: Transforming Connectivity",
+      "body": "The advent of 5G technology promises faster speeds, lower latency, and  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consequatur iste et voluptas veniam accusantium esse nisi ex nam corrupti pariatur, aut placeat ducimus facilis vero reprehenderit velit sequi tempora. Tempora odio iste facilis quod sapiente ab officiis quis eaque minima recusandae! Asperiores velit voluptatum at sapiente placeat, expedita nobis....",
+      "author": "Hauwa Muhammad"
+    },
+    {
+      "id": "3",
+      "title": "Blockchain: Beyond Cryptocurrency",
+      "body": "While blockchain technology gained fame through cryptocurrencies like Bitcoin  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consequatur iste et voluptas veniam accusantium esse nisi ex nam corrupti pariatur, aut placeat ducimus facilis vero reprehenderit velit sequi tempora. Tempora odio iste facilis quod sapiente ab officiis quis eaque minima recusandae! Asperiores velit voluptatum at sapiente placeat, expedita nobis....",
+      "author": "Zainab Muhammad"
+    },
+    {
+      "id": "4",
+      "title": "The Rise of Virtual Reality in Gaming",
+      "body": "Virtual Reality (VR) technology is reshaping the gaming landscape, offering immersive experiences Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consequatur iste et voluptas veniam accusantium esse nisi ex nam corrupti pariatur, aut placeat ducimus facilis vero reprehenderit velit sequi tempora. Tempora odio iste facilis quod sapiente ab officiis quis eaque minima recusandae! Asperiores velit voluptatum at sapiente placeat, expedita nobis....",
+      "author": "Muhammad Salihu"
+    },
+    {
+      "id": "5",
+      "title": "Cybersecurity Trends in 2024",
+      "body": "With cyber threats evolving rapidly, staying ahead of the curve is crucial Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consequatur iste et voluptas veniam accusantium esse nisi ex nam corrupti pariatur, aut placeat ducimus facilis vero reprehenderit velit sequi tempora. Tempora odio iste facilis quod sapiente ab officiis quis eaque minima recusandae! Asperiores velit voluptatum at sapiente placeat, expedita nobis....",
+      "author": "Muhammad Salihu"
+    }
+  ]
+}
