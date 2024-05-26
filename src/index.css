@@ -103,3 +103,41 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* page NotFound */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.not-found h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #e74c3c;
+}
+
+.not-found p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.not-found a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #3498db;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.not-found a:hover {
+  background-color: #2980b9;
+}
