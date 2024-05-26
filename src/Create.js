@@ -1,14 +1,19 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Create = () => {
    const [title, setTittle] = useState('');
    const [body, setBody] =  useState('');
    const [author, setAuthor] =  useState('Muhammad');
+   const [isPending, setIsPending] =useState(false);
+   const pageHistory = useHistory();
 
    const handleSubmit = (e) => {
     e.preventDefault();
     const blog = { title, body, author };
     // console.log(blog);
+
+    setIsPending(true);
 
     fetch('http://localhost:8000/blogs', {
         method: 'POST',
@@ -16,7 +21,12 @@ const Create = () => {
         body: JSON.stringify(blog)
     }).then(() => {
         console.log('new blog added');
-        });
+        setIsPending(false);
+        // pageHistory.go(-1);
+        pageHistory.push('/')
+        })
+
+      
    }
 
     return ( 
@@ -41,13 +51,16 @@ const Create = () => {
                     <option value="Hauwa">Hauwa</option>
                     <option value="Musa">Musa</option>
                 </select>
-                <button>Add Blog</button>
-<div>
-    
-                    <p>{`Title is changing to:  ${title}`}</p>
-                    <p>{`Body is changing to:  ${body}`}</p>
-                    <p>{`Author is changing to:  ${author}`}</p>
-</div>
+                {/* { !isPending && <button >Add Blog</button> }
+                { isPending && <button 
+                disabled
+                >Adding Blog...</button> } */}
+              { !isPending ? <button >Add Blog</button> : <button disabled>Adding Blog...</button> }
+              <div>
+               <p>{`Title is changing to:  ${title}`}</p>
+               <p>{`Body is changing to:  ${body}`}</p>
+               <p>{`Author is changing to:  ${author}`}</p>
+             </div>
             </form>
         </div>
      );
